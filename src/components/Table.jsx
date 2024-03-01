@@ -66,7 +66,7 @@ export default function TableData() {
      
       >
         {(column) => (
-          <TableColumn className="bg-blue-500"   key={column.uid} align={column.uid === "actions" ? "center" : "start"}>
+          <TableColumn className="bg-blue-500 text-white"   key={column.uid} align={column.uid === "actions" ? "center" : "start"}>
             {column.name}
           </TableColumn>
         )}
