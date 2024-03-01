@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"; 
+import { useSelector } from "react-redux";
+// Import NextUI components and hooks
+import { NextUIProvider } from "@nextui-org/react";
+import { DrawerDefault } from "./components/Drawerbar";
+// Import custom components
+import BrowserRouter from 'react-router-dom'
+import TableData from "./components/Table";
+import Header from "./components/Header";
+import { Sidebar } from "./components/Sidebar";
+import Accounts from "./pages/Acoounts";
 
-function App() {
+
+
+export default function App() {
+  const Theme = useSelector((state) => state.theme.theme);
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <NextUIProvider>
+      <div className={Theme}>
+      {/* Apply theme class to outer div */}
+      
+        
+        <div className=" dark:bg-dark bg-background/60 w-screen h-screen flex overflow-hidden ">
+          <Sidebar/>
+          {/* <TableData/> */}
+         <div className="flex-1 overflow-hidden">
+         <Header/>
+         <div className=" overflow-x-auto">
+         <Accounts/>
+         </div>
+         </div>
+        
+        
+      </div>
+     
+      
+      
+      </div>
+    </NextUIProvider>
   );
 }
-
-export default App;
