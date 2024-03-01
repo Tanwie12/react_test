@@ -24,7 +24,7 @@ export default function App() {
         
         <div className=" dark:bg-dark bg-background/60 w-screen h-screen flex overflow-hidden ">
           <Sidebar/>
-          {/* <TableData/> */}
+          
          <div className="flex-1 overflow-hidden">
          <Header/>
          <div className=" overflow-x-auto">

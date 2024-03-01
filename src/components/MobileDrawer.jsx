@@ -22,7 +22,7 @@ export function MobileDrawer() {
         )}
       </IconButton>
       <Drawer open={isDrawerOpen} onClose={closeDrawer}>
-        <Card className="h-[calc(100vh-2rem)]  text-blue-600 max-w-[17rem] md:max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 bg-[#9B679C]">
+        <Card className="h-[calc(100vh-2rem)]  text-blue-600 max-w-[15rem] md:max-w-[15rem] p-4 shadow-xl shadow-blue-gray-900/5">
           <div className="mb-2 flex items-center gap-4 p-4 text-primary">
             <AdjustmentsVerticalIcon className="w-8 h-8"/>
             <Typography variant="h5">DJOKWA</Typography>

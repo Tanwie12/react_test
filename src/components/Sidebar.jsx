@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Card } from "@nextui-org/react";
 import { useSelector } from "react-redux";
 import ThemeSwitcher from "../utils/theme/ThemeSwitcher";
 import {
@@ -7,7 +7,6 @@ import {
   List,
   ListItem,
   ListItemPrefix,
-  Card
 } from "@material-tailwind/react";
 import { PresentationChartBarIcon, SunIcon, MoonIcon, UserIcon } from "@heroicons/react/24/solid";
 
@@ -20,16 +19,16 @@ export function Sidebar() {
 console.log(sidebarvalue+"for real")
   return (
     <>
-     <Card
-        className={`h-[calc(100vh)] w-0 md:w-full md:p-4 text-white  max-w-[20rem]  bg-[#9B679C]  shadow-xl shadow-blue-gray-900/5 ${
+      <Card
+        className={`h-[calc(100vh-2rem)] w-0 md:w-full md:p-4 text-blue-600 max-w-[20rem]   shadow-xl shadow-blue-gray-900/5 ${
           sidebarvalue ? "" : "hidden"
         }`}
       >
-          <div className="mb-2 flex items-center gap-4 p-4 dark:text-primary">
+        <div className="mb-2 flex items-center gap-4 p-4 text-primary">
             <AdjustmentsVerticalIcon className="w-8 h-8"/>
             <Typography variant="h5">DJOKWA</Typography>
           </div>
-          <List className="dark:text-gray-500 text-white">
+          <List className="dark:text-gray-500">
             <ListItem>
               <ListItemPrefix>
                 <PresentationChartBarIcon className="h-5 w-5" />
@@ -78,7 +77,7 @@ console.log(sidebarvalue+"for real")
               <ThemeSwitcher />
             </ListItem>
           </List>
-        </Card>
+      </Card>
     </>
   );
 }
