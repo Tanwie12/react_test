@@ -2,10 +2,9 @@ import React from "react";
 import { useSelector } from "react-redux";
 // Import NextUI components and hooks
 import { NextUIProvider } from "@nextui-org/react";
-import { DrawerDefault } from "./components/Drawerbar";
+
 // Import custom components
-import BrowserRouter from 'react-router-dom'
-import TableData from "./components/Table";
+
 import Header from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
 import Accounts from "./pages/Acoounts";

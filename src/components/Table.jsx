@@ -1,5 +1,5 @@
 import React from "react";
-import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, User, Chip, Tooltip, getKeyValue} from "@nextui-org/react";
+import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, User, Chip, Tooltip,} from "@nextui-org/react";
 import { PencilIcon} from "@heroicons/react/24/outline";
 import { EyeIcon,UserMinusIcon } from "@heroicons/react/24/outline";
 import {columns, users} from "./Data";
@@ -19,7 +19,7 @@ export default function TableData() {
           <User
             avatarProps={{radius: "lg", src: user.avatar}}
             name={cellValue}
-            className="dark:text-white"
+            
           > 
           </User>
         );
@@ -62,9 +62,11 @@ export default function TableData() {
 
   return (
   <Table aria-label="  Example table with custom cells overflow-x-auto">
-      <TableHeader columns={columns}>
+      <TableHeader columns={columns}
+     
+      >
         {(column) => (
-          <TableColumn key={column.uid} align={column.uid === "actions" ? "center" : "start"}>
+          <TableColumn className="bg-blue-500"   key={column.uid} align={column.uid === "actions" ? "center" : "start"}>
             {column.name}
           </TableColumn>
         )}
